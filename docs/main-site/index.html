@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elfbar Trieste</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+   
+
+
+    <body>
+
+        <header>
+            <div class="top-bar">
+                <img src="img/DA_ELFBAR_Logo.png" alt="Лого магазина" class="logo">
+                <div class="icons">
+                    <img src="img/message.png" alt="Сообщения">
+                    <img src="img/notification.png" alt="Уведомления">
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск продуктов">
+            </div>
+            <div class="address">
+                <img src="img/location.png" alt="Местоположение">
+                <p>Sent to: Pamulang Barat Residence No.5, RT 05/...</p>
+            </div>
+        </header>
+        
+        <main>
+            <!-- Главное меню -->
+            <section id="home" class="page">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/elfbar1500.webp"Elfbar 1500" style="width: 100px; height: 100px;">
+                            <p>Elfbar 1500</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/elfbar5000te.webp" alt="Elfbar 5000TE" style="width: 100px; height: 100px;">
+                            <p>Elfbar 5000TE</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/elfbar5000ultra.webp"Elfbar 5000 Ultra" style="width: 100px; height: 100px;">
+                            <p>Elfbar 5000 Ultra</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/elfbar9000pi.webp" alt="Elfbar Pi9000" style="width: 100px; height: 100px;">
+                            <p>Elfbar Pi9000</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Понравившиеся -->
+            <section id="favorites" class="page" style="display: none;">
+                <h2>Понравившиеся товары</h2>
+                <p>Здесь будут отображаться понравившиеся товары.</p>
+            </section>
+        
+            <!-- В корзине -->
+            <section id="cart" class="page" style="display: none;">
+                <h2>Корзина</h2>
+                <p>Здесь будут отображаться товары в корзине.</p>
+            </section>
+        
+            <!-- Аккаунт -->
+            <section id="account" class="page" style="display: none;">
+                <h2>Аккаунт</h2>
+                <p>Здесь будет информация об аккаунте.</p>
+            </section>
+        </main>
+        
+
+
+        <footer class="footer">
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('favorites')">Понравившееся</button>
+            <button onclick="showPage('cart')">В корзине</button>
+            <button onclick="showPage('account')">Аккаунт</button>
+        </footer>
+        
+    
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/animation.js"></script>
+    
+    
+        </body>
+    
+
+</html> 

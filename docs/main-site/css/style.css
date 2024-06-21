@@ -98,11 +98,13 @@ main {
     padding: 10px;
 }
 .swiper-container {
-    width: 100%;
+    max-width: 100%;
     padding-top: 10px;
     padding-bottom: 30px;
+    overflow: hidden;
 }
 .swiper-slide {
+    max-width: 90%;
     background-color: white;
     text-align: center;
     display: flex;
@@ -111,25 +113,44 @@ main {
     justify-content: center;
     border-radius: 10px;
     padding: 10px;
+    
 }
+
+
 .categories h2, .offers h2 {
     margin-bottom: 10px;
 }
-footer {
+
+
+.footer {
+    
     background-color: #333;
     color: white;
     padding: 10px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Равномерное распределение кнопок */
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-footer button {
+
+.footer button {
     background: none;
     border: none;
     color: white;
     font-size: 14px;
-    flex: 1;
-    padding: 10px 0;
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
 }
+
+.footer button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Цвет фона при наведении */
+}
+
+
+
+  
+
+
+
