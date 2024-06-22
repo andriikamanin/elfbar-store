@@ -47,7 +47,7 @@ body {
     background-color: #f4f4f4;
 }
 header {
-    background-color: #555555;
+    background-color: #969696;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -61,34 +61,53 @@ header .top-bar {
     align-items: center;
     padding: 5px 0;
 }
-header img.logo {
-    max-height: 30px;
-}
-header .icons img {
-    height: 24px;
-    margin-left: 10px;
-}
-header .search-bar {
+
+
+
+.top-bar {
+    padding: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px 10px;
-    width: 100%;
-    max-width: 600px;
-    margin: 10px 0;
 }
-header .search-bar input {
-    width: 100%;
-    padding: 5px;
-    font-size: 14px;
-    border: none;
-    outline: none;
+
+.logo {
+    display: flex; /* Добавляем flex-контейнер */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    padding: 10px; /* Добавляем внутренний отступ */
+    border-radius: 10px;
+    background-color: transparent; /* Убираем задний фон */
+    width: 100%; /* Чтобы логотип занимал всю доступную ширину */
+    text-align: center; /* Выравниваем текст по центру */
 }
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    background-image: linear-gradient(to right bottom, #e300ff, #ff00aa, #ff5956, #ffb900, #fffe00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Обводка текста */
+}
+
+
+
+
+
+
+
+
+
+
+
 header .address {
+    
     font-size: 12px;
     display: flex;
     align-items: center;
+    padding-top: 36px;
 }
 header .address img {
     height: 16px;
@@ -108,7 +127,7 @@ main {
     
     
     
-    max-width: 90%;
+    max-width: 95%;
     background-color: white;
     text-align: center;
     display: flex;
@@ -129,8 +148,8 @@ main {
   overflow: hidden;
   position: relative;
   transform-style: preserve-3d;
-  perspective: 1000px;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  
+  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
   cursor: pointer;
 
 }
@@ -148,7 +167,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
@@ -164,7 +183,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
@@ -223,5 +242,66 @@ main {
 
   
 
-
+.box-input {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .border {
+    min-width: 100%;
+    background-image: linear-gradient(to right bottom, #e300ff, #ff00aa, #ff5956, #ffb900, #fffe00);
+    box-shadow: -25px -10px 30px -5px rgba(225, 0, 255, 0.5),
+      25px -10px 30px -5px rgba(255, 0, 212, 0.5),
+      25px 10px 30px -5px rgba(255, 174, 0, 0.5),
+      -25px 10px 30px -5px rgba(255, 230, 0, 0.5);
+    padding: 4px;
+  }
+  
+  .input {
+    min-width: 100%;
+    background-color: #212121;
+    max-width: 250px;
+    height: 40px;
+    padding: 0 19px 0 10px;
+    font-size: 1.1em;
+    position: relative;
+    border: none;
+    color: white;
+    outline: 0;
+    overflow: hidden;
+  }
+  
+  .box-input::after,
+  .box-input::before {
+    min-width: 100%;
+    content: "";
+    
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .box-input::after {
+    min-width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .box-input::before {
+    min-width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .input::placeholder {
+    min-width: 100%;
+    transition: all 0.5s ease-in, transform 0.2s ease-in 0.6s;
+  }
+  
+  .input:focus::placeholder {
+    min-width: 100%;
+    padding-left: 100%;
+    transform: translateY(-50px);
+  }
+  
 
